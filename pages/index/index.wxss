@@ -5,8 +5,8 @@
   margin:auto;
 }
 .block{
-  width:40rpx;
-  height:40rpx;
+  width:30rpx;
+  height:30rpx;
   background-color:darkorange;
   margin-left:4rpx;
   margin-top:4rpx;
@@ -14,14 +14,14 @@
   font-size:20rpx;
 }
 .white{
-  width:40rpx;
-  height:40rpx;
+  width:30rpx;
+  height:30rpx;
   border-radius:50%;
   background-color:#ffffff;
 }
 .black{
-  width:40rpx;
-  height:40rpx;
+  width:30rpx;
+  height:30rpx;
   border-radius:50%;
   background-color:#000000;
 }

@@ -4,7 +4,7 @@ var app = getApp()
 var util = require('../../utils/util.js');
 function initVak() {
   let arr = [];
-  for (let i = 0; i < 255; i++) {
+  for (let i = 0; i < 360; i++) {
     arr.push('empty')
   }
   console.log('init', arr)

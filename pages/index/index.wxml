@@ -9,6 +9,6 @@
     </view>
   </view>
   <view class="restart-container">
-    <button type="primary" bindtap="restart">Restart</button>
+    <button type="primary" bindtap="restart">重新开始</button>
   </view>
 </view>
