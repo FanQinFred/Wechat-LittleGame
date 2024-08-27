@@ -56,7 +56,7 @@ var Pi = Page({
     for (var i = 0; i < 4; i++) {
       var five = 0;
       round = 0;
-      for (x = x0, y = y0; round < 5; x += this.vec[i][0], y += this.vec[i][1], round++) {
+      for (x = x0, y = y0; round < 6; x += this.vec[i][0], y += this.vec[i][1], round++) {
         if (this.data.vak[15 * x + y] == color) {
           five++;
         }
@@ -65,7 +65,7 @@ var Pi = Page({
         }
       }
       round = 0;
-      for (x = x0, y = y0; round < 5; x -= this.vec[i][0], y -= this.vec[i][1], round++) {
+      for (x = x0, y = y0; round < 6; x -= this.vec[i][0], y -= this.vec[i][1], round++) {
         if (this.data.vak[15 * x + y] == color) {
           five++;
         }
@@ -74,7 +74,7 @@ var Pi = Page({
         }
       }
       var rstr = color + "win";
-      if (five >= 6) {
+      if (five >= 7) {
         this.setData({
           result: rstr
         });
