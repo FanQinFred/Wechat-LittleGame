@@ -1,32 +1,50 @@
 /**index.wxss**/
-.qipan{
-  width:660rpx;
-  height:660rpx;
-  margin:auto;
+.index{
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* 水平居中 */
+  align-items: center; /* 垂直居中 */
+  height: 85vh; /* 父容器的高度 */
+}
+.qipan {
+  max-width: 400px;
+  width: 90%;
+  aspect-ratio: 1 / 1; /* Ensures height equals width */
+  /* margin: auto; */
+  padding: 10px;
+  background-color: #f7e7b6;
+  border-radius: 5px;
+}
+.qipan-in{
+  border: 1px solid #c1a37a;
+  width: 100%;
+  height: 100%;
+  background-color: #c1a37a;
 }
 .block{
-  width:30rpx;
-  height:30rpx;
-  background-color:darkorange;
-  margin-left:4rpx;
-  margin-top:4rpx;
+  width:5%;
+  height:5%;
+  background-color:#f7e7b6;
+  margin-left:1px;
+  margin-top:1px;
   float:left;
-  font-size:20rpx;
+  font-size:12px;
 }
 .white{
-  width:30rpx;
-  height:30rpx;
+  z-index: 9999;
+  width:100%;
+  height:100%;
   border-radius:50%;
   background-color:#ffffff;
 }
 .black{
-  width:30rpx;
-  height:30rpx;
+  width:100%;
+  height:100%;
   border-radius:50%;
   background-color:#000000;
 }
 .restart-container{
-  margin-top: 100rpx;
+  /* margin-top: 100rpx; */
   width: 660rpx;
   padding: 50rpx;
 }

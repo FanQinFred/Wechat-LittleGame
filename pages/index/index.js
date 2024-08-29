@@ -2,9 +2,10 @@
 //获取应用实例
 var app = getApp()
 var util = require('../../utils/util.js');
+
 function initVak() {
   let arr = [];
-  for (let i = 0; i < 360; i++) {
+  for (let i = 0; i < 361; i++) {
     arr.push('empty')
   }
   console.log('init', arr)
@@ -31,8 +32,7 @@ var Pi = Page({
     let decision;
     if (this.count % 2) {
       this.data.vak[pos] = "black";
-    }
-    else {
+    } else {
       this.data.vak[pos] = "white";
     }
     console.log('data.vak', this.data.vak)
@@ -41,7 +41,7 @@ var Pi = Page({
     })
     this.judge(pos);
   },
-  restart () {
+  restart() {
     this.setData({
       logs: [],
       vak: initVak(),
@@ -52,24 +52,24 @@ var Pi = Page({
   },
   judge(pos) {
     var color = this.data.vak[pos];
-    var x0 = parseInt(pos / 15), y0 = pos % 15, x, y, round;
+    var x0 = parseInt(pos / 19),
+      y0 = pos % 19,
+      x, y, round;
     for (var i = 0; i < 4; i++) {
       var five = 0;
       round = 0;
       for (x = x0, y = y0; round < 6; x += this.vec[i][0], y += this.vec[i][1], round++) {
-        if (this.data.vak[15 * x + y] == color) {
+        if (this.data.vak[19 * x + y] == color) {
           five++;
-        }
-        else {
+        } else {
           break;
         }
       }
       round = 0;
       for (x = x0, y = y0; round < 6; x -= this.vec[i][0], y -= this.vec[i][1], round++) {
-        if (this.data.vak[15 * x + y] == color) {
+        if (this.data.vak[19 * x + y] == color) {
           five++;
-        }
-        else {
+        } else {
           break;
         }
       }
@@ -92,7 +92,7 @@ var Pi = Page({
       }
     }
   },
-  onLoad () {
+  onLoad() {
     this.setData({
       logs: (wx.getStorageSync('logs') || []).map(function (log) {
         return util.formatTime(new Date(log))
